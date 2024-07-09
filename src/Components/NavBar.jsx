@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../assets/DR Muebles Blanco.png';
-import Carrito from '../assets/Carrito.png';
+import CartWidget from './CartWidget';
+import ItemListContainer from './ItemListContainer';
 
 export const NavBar = () => {
     return (
@@ -10,13 +11,13 @@ export const NavBar = () => {
                 <h1>DR Muebles</h1>
             </div>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Proyecto</a></li>
-                <li><a href="#">Tienda</a></li>
-                <li><a href="#">Contacto</a></li>
+                <ItemListContainer texto="Inicio" link="#" seleccionado="LinkSeleccionado"/>
+                <ItemListContainer texto="Acerca de" link="#" seleccionado="LinkNoSeleccionado"/>
+                <ItemListContainer texto="Proyecto" link="#" seleccionado="LinkNoSeleccionado"/>
+                <ItemListContainer texto="Tienda" link="#" seleccionado="LinkNoSeleccionado"/>
+                <ItemListContainer texto="Contacto" link="#" seleccionado="LinkNoSeleccionado"/>
             </ul>
-            <div className='Carrito'><img src={Carrito} alt="Carrito de compras" /></div>
+            <CartWidget />
         </nav>
     );
 };

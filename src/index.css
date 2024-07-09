@@ -1,8 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav{
   display: flex;
   flex-direction: row;
-  background-color: rgb(85, 14, 14);
+  background-color: #b07c3dad;
   width: 100%;
+  margin: 0;
+  justify-content: space-between;
+  padding: 0.5vw 1vw;
 }
 
 ul{
@@ -17,6 +26,19 @@ ul{
 li a{
   color: white;
   text-decoration: none;
+  font-family:  "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.LinkSeleccionado{
+  background-color: white;
+  padding: 0.5vw 1vw;
+  border-radius: 25px;
+}
+
+.LinkSeleccionado a{
+  font-weight: 600;
+  color: #523614ad;
 }
 
 .Logo{
@@ -29,19 +51,41 @@ li a{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 1vw;
 }
 
 .Logo h1 {
   color: white;
+  font-family: "Figtree", sans-serif;
 }
 
 .Logo img{
-  width: 10vw;
-  height: 10vw;
+  width: 3vw;
+  height: 3vw;
+}
+
+.Carrito{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .Carrito img{
-  width: 10vw;
-  height: 10vw;
+  width: 3vw;
+  height: 3vw;
 }
 
+.Carrito div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0.7vw 0.9vw;
+  border-radius: 100%;
+}
+
+.Carrito div p{
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  color: #523614ad;
+}
