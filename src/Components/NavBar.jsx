@@ -11,10 +11,10 @@ export const NavBar = () => {
                 <h1>DR Muebles</h1>
             </div>
             <ul>
-                <ItemListContainer texto="Inicio" link="#" seleccionado="LinkSeleccionado"/>
+                <ItemListContainer texto="Inicio" link="#" seleccionado="LinkNoSeleccionado"/>
                 <ItemListContainer texto="Acerca de" link="#" seleccionado="LinkNoSeleccionado"/>
                 <ItemListContainer texto="Proyecto" link="#" seleccionado="LinkNoSeleccionado"/>
-                <ItemListContainer texto="Tienda" link="#" seleccionado="LinkNoSeleccionado"/>
+                <ItemListContainer texto="Tienda" link="#" seleccionado="LinkSeleccionado"/>
                 <ItemListContainer texto="Contacto" link="#" seleccionado="LinkNoSeleccionado"/>
             </ul>
             <CartWidget />
