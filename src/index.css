@@ -98,14 +98,35 @@ li a{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 1vw;
+  text-decoration: none;
+  color: inherit
 }
 
 .FotoProducto{
+  height: 60%;
+}
+
+.FotoProducto img{
   width: 7vw;
   height: auto;
 }
 
 .NombreProducto{
+  height: 15%;
+}
+
+.NombreProducto h1{
   font-family: "Figtree", sans-serif;
   font-size: 1vw;
+  text-align: center;
+}
+
+.precio{
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }

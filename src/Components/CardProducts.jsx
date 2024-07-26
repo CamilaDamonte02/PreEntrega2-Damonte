@@ -7,9 +7,9 @@ function CardProducts({product}) {
     border="1px solid black" 
     >
         <a className='producto' href="">
-            <div><img src={product.foto} alt="" className='FotoProducto' /></div>
-            <div><h1 className='NombreProducto'>{product.producto} línea {product.linea}</h1></div>
-            <div>
+            <div className='FotoProducto'><img src={product.foto} alt=""/></div>
+            <div className='NombreProducto'><h1>{product.producto} línea {product.linea}</h1></div>
+            <div className='precio'>
                 <p className='precioNuevoProducto'>{product.precioNuevo}</p>
                 <p className='precioprecioViejo'>{product.precioViejo}</p>
             </div>
