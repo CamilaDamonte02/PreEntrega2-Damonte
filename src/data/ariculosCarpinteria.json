@@ -13,7 +13,7 @@
       },
       "color": "Negro",
       "material": "Cuero sintético",
-      "foto": "1.png",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/1.png",
       "fechaLanzamiento": "2024-02-20"
     },
     {
@@ -30,7 +30,7 @@
       },
       "color": "Blanco",
       "material": "Acero y tela",
-      "foto": "2.png",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/2.png",
       "fechaLanzamiento": "2024-03-15"
     },
     {
@@ -47,7 +47,7 @@
       },
       "color": "Gris claro",
       "material": "Madera MDF",
-      "foto": "3.png",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/3.png",
       "fechaLanzamiento": "2024-04-10"
     },
     {
@@ -64,7 +64,7 @@
       },
       "color": "Beige",
       "material": "Lino y espuma",
-      "foto": "4.png",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/4.png",
       "fechaLanzamiento": "2024-05-25"
     },
     {
@@ -81,7 +81,7 @@
       },
       "color": "Nogal",
       "material": "Madera de nogal",
-      "foto": "5.png",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/5.png",
       "fechaLanzamiento": "2024-06-30"
     }
 ]  

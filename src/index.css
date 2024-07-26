@@ -89,3 +89,23 @@ li a{
   font-weight: 600;
   color: #523614ad;
 }
+
+/*SEGUNDA PRE ENTREGA*/
+
+.producto{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FotoProducto{
+  width: 7vw;
+  height: auto;
+}
+
+.NombreProducto{
+  font-family: "Figtree", sans-serif;
+  font-size: 1vw;
+}
