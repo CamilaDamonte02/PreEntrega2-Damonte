@@ -4,6 +4,7 @@ import loader from './assets/cargando.gif'
 import CardProductsList from './Components/CardProductsList';
 import data from './data/ariculosCarpinteria.json'
 import Filtros from './Components/filtros'
+import Cartel from './Components/Cartel'
 import './App.css';
 
 function App() {
@@ -22,23 +23,25 @@ function App() {
   }, []);
   
   
-
+  
   return (
     <>
+      <NavBar />
       {loading ? (
         <img src={loader} alt='cargando' />
-      ) : (<>
-        <NavBar />
-        <main>
+      ) : products.length ? (
+        <div  loading={loading}>
+          
           <h1 className="titulo-tienda">Tienda</h1>
           <div className="contenido-tienda">
             <Filtros />
             <div className='cardProductListContainer'>
-              <CardProductsList products={products} loading={loading}/>
+              <CardProductsList products={products}/>
             </div>
           </div>
-        </main>
-        </>
+        </div>
+      ) : (
+        <main><Cartel nombre = 'Advertencia' descripcion='No hay productos disponibles'/></main>
       )}
     </>
   );
