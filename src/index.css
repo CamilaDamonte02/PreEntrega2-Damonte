@@ -7,7 +7,7 @@
 nav{
   display: flex;
   flex-direction: row;
-  background-color: #b07c3dad;
+  background-color: #808080;
   width: 100%;
   margin: 0;
   justify-content: space-between;
@@ -38,7 +38,7 @@ li a{
 
 .LinkSeleccionado a{
   font-weight: 600;
-  color: #523614ad;
+  color: #808080;
 }
 
 .Logo{
@@ -87,10 +87,38 @@ li a{
 .Carrito div p{
   font-family: "Figtree", sans-serif;
   font-weight: 600;
-  color: #523614ad;
+  color: #808080;
 }
 
 /*SEGUNDA PRE ENTREGA*/
+.titulo-tienda{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  color: #808080;
+  margin: 2vw 0;
+  font-size: 5vw;
+  font-family: "Figtree", sans-serif
+}
+
+.contenido-tienda{
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  margin: 2vw 0;
+  justify-content: space-between;
+}
+
+.cardProductListContainer{
+  margin-right: 3vw;
+}
+
+.ProductList{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+}
 
 .producto{
   height: 100%;
@@ -105,10 +133,16 @@ li a{
 
 .FotoProducto{
   height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
 }
 
 .FotoProducto img{
-  width: 7vw;
+  width: 12vw;
+  max-height: 15vw;
+  margin-top: 1vw;
   height: auto;
 }
 
@@ -117,8 +151,8 @@ li a{
 }
 
 .NombreProducto h1{
-  font-family: "Figtree", sans-serif;
-  font-size: 1vw;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5vw;
   text-align: center;
 }
 
@@ -127,6 +161,35 @@ li a{
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
   align-items: center;
+  font-size: 2vw;
+  gap: 1vw;
+}
+
+.precioViejo{
+  text-decoration: line-through;
+  color: red;
+}
+
+/*FILTOS*/
+.Filtros{
+  background-color: #808080;
+  line-height: 2.5vw;
+  padding: 1.5vw;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  padding-right: 2.5vw;
+}
+.Categoria{
+  font-size: 2.5vw;
+}
+.CategoriaTitulo{
+  margin: 1vw 0;
+}
+.SubCategoria{  
+  margin-left: 3vw;
+  font-size: 1.7vw;
+  text-decoration: underline;
 }

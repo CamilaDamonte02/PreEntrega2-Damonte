@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavBar from './Components/NavBar';
 import loader from './assets/cargando.gif'
 import CardProductsList from './Components/CardProductsList';
 import data from './data/ariculosCarpinteria.json'
+import Filtros from './Components/filtros'
 import './App.css';
 
 function App() {
@@ -10,22 +11,34 @@ function App() {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    //const myPromise = new Promise((res, rej) => res(data))
-    //Para simular una tardanza
-    //setTimeout es una función predefinida de js donde el primer parámetro es la función y el segundo el tiempo de espera
-    const myPromise = new Promise((res, rej) => setTimeout(()=> res(data),0))
+    // Para simular una tardanza
+    // setTimeout es una función predefinida de JS donde el primer parámetro es la función y el segundo el tiempo de espera
+    const myPromise = new Promise((res) => setTimeout(() => res(data), 0));
+  
     myPromise
-    .then(response => setProducts(response))
-    .finally(() => setLoading(false))
-  }, [])
+      .then(response => setProducts(response))
+      .catch(error => console.error('Error:', error)) // Manejo de error
+      .finally(() => setLoading(false));
+  }, []);
+  
+  
 
   return (
     <>
-      <NavBar />
       {loading ? (
         <img src={loader} alt='cargando' />
-      ) : (
-        <CardProductsList products={products} loading={loading}/>
+      ) : (<>
+        <NavBar />
+        <main>
+          <h1 className="titulo-tienda">Tienda</h1>
+          <div className="contenido-tienda">
+            <Filtros />
+            <div className='cardProductListContainer'>
+              <CardProductsList products={products} loading={loading}/>
+            </div>
+          </div>
+        </main>
+        </>
       )}
     </>
   );

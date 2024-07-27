@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../assets/DR Muebles Blanco.png';
 import CartWidget from './CartWidget';
 import ItemListContainer from './ItemListContainer';
