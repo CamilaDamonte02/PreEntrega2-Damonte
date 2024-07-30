@@ -1,87 +1,164 @@
 [
-    {
+  {
       "id": "1",
-      "producto": "Silla",
-      "linea": "Moderna Comfort",
-      "descripcion": "Silla ergonómica con soporte lumbar ajustable y reposabrazos acolchados.",
-      "precioNuevo": 150,
-      "precioViejo": 200,
+      "categoria": "Escritorio",
+      "linea": "Moderna_Comfort",
+      "descripcion": "Escritorio 'Moderna Comfort': elegante, funcional y perfecto para un ambiente de trabajo sofisticado.",
+      "cantidadDisponible": 10,
+      "precio": 10490,
       "dimensiones": {
-        "largo": "60 cm",
-        "ancho": "60 cm",
-        "alto": "110 cm"
+          "alto": "48 cm",
+          "ancho": "1 m",
+          "profundidad": "72 cm"
       },
-      "color": "Negro",
+      "cajones": 0,
+      "peso": "20 kg",
       "material": "Cuero sintético",
       "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/1.png",
       "fechaLanzamiento": "2024-02-20"
-    },
-    {
+  },
+  {
       "id": "2",
-      "producto": "Lámpara",
-      "linea": "Ilumina Home",
-      "descripcion": "Lámpara de mesa con base de acero y pantalla de tela, ideal para cualquier habitación.",
-      "precioNuevo": 75,
-      "precioViejo": 100,
+      "categoria": "Rack",
+      "cantidadDisponible": 10,
+      "linea": "Elegance_Line",
+      "precio": 7990,
+      "descripcion": "Rack 'Elegance Line': elegante y funcional, ideal para organizar tu espacio.",
       "dimensiones": {
-        "largo": "30 cm",
-        "ancho": "30 cm",
-        "alto": "50 cm"
+          "alto": "60 cm",
+          "ancho": "1.2 m",
+          "profundidad": "30 cm"
       },
-      "color": "Blanco",
-      "material": "Acero y tela",
+      "cajones": 0,
+      "peso": "15 kg",
+      "material": "Madera",
       "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/2.png",
       "fechaLanzamiento": "2024-03-15"
-    },
-    {
+  },
+  {
       "id": "3",
-      "producto": "Estante",
-      "linea": "Minimalista",
-      "descripcion": "Estante flotante de madera para almacenamiento de libros y decoraciones.",
-      "precioNuevo": 120,
-      "precioViejo": 150,
+      "categoria": "Rack",
+      "cantidadDisponible": 8,
+      "linea": "Modern_Touch",
+      "precio": 8990,
+      "descripcion": "Rack 'Modern Touch' con 3 cajones: práctico y elegante para tu hogar.",
       "dimensiones": {
-        "largo": "80 cm",
-        "ancho": "20 cm",
-        "alto": "20 cm"
+          "alto": "60 cm",
+          "ancho": "1.2 m",
+          "profundidad": "30 cm"
       },
-      "color": "Gris claro",
-      "material": "Madera MDF",
+      "cajones": 3,
+      "peso": "18 kg",
+      "material": "Madera",
       "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/3.png",
       "fechaLanzamiento": "2024-04-10"
-    },
-    {
+  },
+  {
       "id": "4",
-      "producto": "Sofá",
-      "linea": "Confort Plus",
-      "descripcion": "Sofá de 3 plazas con funda de lino y cojines rellenos de espuma de alta densidad.",
-      "precioNuevo": 950,
-      "precioViejo": 1200,
+      "categoria": "Estantería",
+      "cantidadDisponible": 5,
+      "linea": "Classic_Storage",
+      "precio": 10990,
+      "descripcion": "Estantería 'Classic Storage' con 6 cajones: ideal para organizar y decorar.",
       "dimensiones": {
-        "largo": "200 cm",
-        "ancho": "90 cm",
-        "alto": "85 cm"
+          "alto": "1.8 m",
+          "ancho": "1.5 m",
+          "profundidad": "35 cm"
       },
-      "color": "Beige",
-      "material": "Lino y espuma",
+      "cajones": 6,
+      "peso": "25 kg",
+      "material": "Madera",
       "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/4.png",
-      "fechaLanzamiento": "2024-05-25"
-    },
-    {
+      "fechaLanzamiento": "2024-05-20"
+  },
+  {
       "id": "5",
-      "producto": "Mesa de comedor",
-      "linea": "Elegance",
-      "descripcion": "Mesa de comedor de madera con acabado en nogal y capacidad para 6 personas.",
-      "precioNuevo": 500,
-      "precioViejo": 700,
+      "categoria": "Rack",
+      "cantidadDisponible": 7,
+      "linea": "Elegance_Line",
+      "precio": 8490,
+      "descripcion": "Rack 'Elegance Line' con 4 cajones: funcional y con estilo.",
       "dimensiones": {
-        "largo": "180 cm",
-        "ancho": "90 cm",
-        "alto": "75 cm"
+          "alto": "60 cm",
+          "ancho": "1.2 m",
+          "profundidad": "30 cm"
       },
-      "color": "Nogal",
-      "material": "Madera de nogal",
+      "cajones": 4,
+      "peso": "20 kg",
+      "material": "Madera",
       "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/5.png",
-      "fechaLanzamiento": "2024-06-30"
-    }
-]  
+      "fechaLanzamiento": "2024-06-25"
+  },
+  {
+      "id": "6",
+      "categoria": "Rack",
+      "cantidadDisponible": 6,
+      "linea": "Modern_Touch",
+      "precio": 8490,
+      "descripcion": "Rack 'Modern Touch' con 4 cajones: práctico y elegante.",
+      "dimensiones": {
+          "alto": "60 cm",
+          "ancho": "1.2 m",
+          "profundidad": "30 cm"
+      },
+      "cajones": 4,
+      "peso": "20 kg",
+      "material": "Madera",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/6.png",
+      "fechaLanzamiento": "2024-07-15"
+  },
+  {
+      "id": "7",
+      "categoria": "Rack",
+      "cantidadDisponible": 4,
+      "linea": "Classic_Storage",
+      "precio": 9290,
+      "descripcion": "Rack 'Classic Storage' con 5 cajones: ideal para almacenamiento adicional.",
+      "dimensiones": {
+          "alto": "60 cm",
+          "ancho": "1.2 m",
+          "profundidad": "30 cm"
+      },
+      "cajones": 5,
+      "peso": "22 kg",
+      "material": "Madera",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/7.png",
+      "fechaLanzamiento": "2024-08-10"
+  },
+  {
+      "id": "8",
+      "categoria": "Mesa de luz",
+      "cantidadDisponible": 12,
+      "linea": "Compact_Design",
+      "precio": 5990,
+      "descripcion": "Mesa de luz 'Compact Design' con 1 cajón: elegante y práctica para tu habitación.",
+      "dimensiones": {
+          "alto": "50 cm",
+          "ancho": "40 cm",
+          "profundidad": "30 cm"
+      },
+      "cajones": 1,
+      "peso": "10 kg",
+      "material": "Madera",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/8.png",
+      "fechaLanzamiento": "2024-09-05"
+  },
+  {
+      "id": "9",
+      "categoria": "Escritorio",
+      "cantidadDisponible": 9,
+      "linea": "Office_Elite",
+      "precio": 11990,
+      "descripcion": "Escritorio 'Office Elite' con 4 cajones: ideal para una oficina organizada y elegante.",
+      "dimensiones": {
+          "alto": "75 cm",
+          "ancho": "1.5 m",
+          "profundidad": "60 cm"
+      },
+      "cajones": 4,
+      "peso": "25 kg",
+      "material": "Madera",
+      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/9.png",
+      "fechaLanzamiento": "2024-10-10"
+  }
+]

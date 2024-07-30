@@ -1,23 +1,46 @@
-function Filtros() {
-    return <div className="Filtros">
+import { useEffect, useState } from 'react';
+import JSON from '../data/ariculosCarpinteria.json'
+import { NavLink } from 'react-router-dom';
+
+const Filtros = () => {
+    const [categorias, setCategorias] = useState([]);
+    const [lineas, setLineas] = useState([]);
+
+    useEffect(() => {
+        const categoriasSinRepeticion = [...new Set(    JSON.map(item => item.categoria))]
+        setCategorias(categoriasSinRepeticion)
+    }, [])
+
+    useEffect(() => {
+        const lineasSinRepeticion = [...new Set(    JSON.map(item => item.linea))]
+        setLineas(lineasSinRepeticion)
+    }, [])
+
+    return (
+        <div className="Filtros">
         <div className="Categoria">
             <p className="CategoriaTitulo">Muebles</p>
-            <div className="SubCategoria">
-                <p>Escritorio</p>
-                <p>Repisas</p>
-                <p>Racks</p>
-                <p>Bibliotecas</p>
-            </div>
+            <ul className="SubCategoria">
+                {categorias.map((categoria, index)=> (
+                    <li key={index}>
+                        <NavLink to={`/${categoria}`} activeClassName="active">
+                            {categoria}
+                        </NavLink>
+                    </li>
+                ))}
+            </ul>
         </div>
         <div className="Categoria">
             <p className="CategoriaTitulo">Líneas</p>
-                <div className="SubCategoria">
-                    <p>Rústico Encanto</p>
-                    <p>Modernidad Elegante</p>
-                    <p>Linea Natural</p>
-            </div>
+            <ul className="SubCategoria">
+                {lineas.map((linea, index)=> (
+                    <li as={NavLink} key={index}><a href="/{linea}">{linea}</a></li>
+                ))}
+            </ul>
         </div>
     </div>
+    )
 }
+
 
 export default Filtros;
