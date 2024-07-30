@@ -30,8 +30,8 @@ function App() {
       {loading ? (
         <img src={loader} alt='cargando' />
       ) : products.length ? (
-        <div  loading={loading}>
-          
+        <div  className='tienda' loading={loading}>
+          <img className='Portada' src='https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/portadaTienda.png' ></img>
           <h1 className="titulo-tienda">Tienda</h1>
           <div className="contenido-tienda">
             <Filtros />
