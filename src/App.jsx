@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const myPromise = new Promise ((res) => {
-      setTimeout(() => res(data), 2000)})
+      setTimeout(() => res(data), 1000)})
       .then(res => {
         console.table(categoryId)
         if (!categoryId){
@@ -28,17 +28,19 @@ function App() {
           //Si categorias no es un array vacío muestro ese array
           setProducts(CategoriasFilter.length > 0 ? CategoriasFilter : LineasFilter);
         }
+        console.table(products)
         setLoading(false); 
     } )
   },  [categoryId]);
     
   return (
     <>
+    <BrowserRouter>
       <NavBar />
       {loading ? (
-        <img className="imagenCargando" src={loader} alt='cargando'/>
+        <div className="imagenCargando"><img  src={loader} alt='cargando'/></div>
       ) : products.length ? (
-        <div  className='tienda' loading={loading}>
+        <div  className='tienda body' >
           <img className='Portada' src='https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/portadaTienda.png' ></img>
           <h1 className="titulo-tienda">Tienda</h1>
           <div className="contenido-tienda">
@@ -51,6 +53,7 @@ function App() {
       ) : (
         <main><Cartel nombre = 'Advertencia' descripcion='No hay productos disponibles'/></main>
       )}
+      </BrowserRouter>
     </>
   );
 }

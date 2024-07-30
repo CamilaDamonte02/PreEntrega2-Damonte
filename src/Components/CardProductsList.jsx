@@ -15,11 +15,6 @@ function CardProductsList({ products }) {
 CardProductsList.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    foto: PropTypes.string.isRequired,
-    producto: PropTypes.string.isRequired,
-    linea: PropTypes.string.isRequired,
-    precioNuevo: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    precioViejo: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   })).isRequired
 };
 

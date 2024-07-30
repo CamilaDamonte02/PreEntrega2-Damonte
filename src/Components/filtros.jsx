@@ -7,38 +7,42 @@ const Filtros = () => {
     const [lineas, setLineas] = useState([]);
 
     useEffect(() => {
-        const categoriasSinRepeticion = [...new Set(    JSON.map(item => item.categoria))]
+        const categoriasSinRepeticion = [...new Set(JSON.map(item => item.categoria))]
         setCategorias(categoriasSinRepeticion)
     }, [])
 
     useEffect(() => {
-        const lineasSinRepeticion = [...new Set(    JSON.map(item => item.linea))]
+        const lineasSinRepeticion = [...new Set(JSON.map(item => item.linea))]
         setLineas(lineasSinRepeticion)
     }, [])
 
     return (
         <div className="Filtros">
-        <div className="Categoria">
-            <p className="CategoriaTitulo">Muebles</p>
-            <ul className="SubCategoria">
-                {categorias.map((categoria, index)=> (
-                    <li key={index}>
-                        <NavLink to={`/${categoria}`} activeClassName="active">
-                            {categoria}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
+            <div className="Categoria">
+                <p className="CategoriaTitulo">Muebles</p>
+                <ul className="SubCategoria">
+                    {categorias.map((categoria, index) => (
+                        <li key={index}>
+                            <NavLink to={`/${categoria}`} className={({ isActive }) => (isActive ? "active" : "")}>
+                                {categoria}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className="Categoria">
+                <p className="CategoriaTitulo">Líneas</p>
+                <ul className="SubCategoria">
+                    {lineas.map((linea, index) => (
+                        <li key={index}>
+                            <NavLink to={`/${linea}`} className={({ isActive }) => (isActive ? "active" : "noActivo")}>
+                                {linea}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
-        <div className="Categoria">
-            <p className="CategoriaTitulo">Líneas</p>
-            <ul className="SubCategoria">
-                {lineas.map((linea, index)=> (
-                    <li as={NavLink} key={index}><a href="/{linea}">{linea}</a></li>
-                ))}
-            </ul>
-        </div>
-    </div>
     )
 }
 

@@ -6,6 +6,10 @@
       "descripcion": "Escritorio 'Moderna Comfort': elegante, funcional y perfecto para un ambiente de trabajo sofisticado.",
       "cantidadDisponible": 10,
       "precio": 10490,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "dimensiones": {
           "alto": "48 cm",
           "ancho": "1 m",
@@ -23,6 +27,10 @@
       "cantidadDisponible": 10,
       "linea": "Elegance_Line",
       "precio": 7990,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "descripcion": "Rack 'Elegance Line': elegante y funcional, ideal para organizar tu espacio.",
       "dimensiones": {
           "alto": "60 cm",
@@ -41,6 +49,10 @@
       "cantidadDisponible": 8,
       "linea": "Modern_Touch",
       "precio": 8990,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "descripcion": "Rack 'Modern Touch' con 3 cajones: práctico y elegante para tu hogar.",
       "dimensiones": {
           "alto": "60 cm",
@@ -59,6 +71,10 @@
       "cantidadDisponible": 5,
       "linea": "Classic_Storage",
       "precio": 10990,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "descripcion": "Estantería 'Classic Storage' con 6 cajones: ideal para organizar y decorar.",
       "dimensiones": {
           "alto": "1.8 m",
@@ -77,6 +93,10 @@
       "cantidadDisponible": 7,
       "linea": "Elegance_Line",
       "precio": 8490,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "descripcion": "Rack 'Elegance Line' con 4 cajones: funcional y con estilo.",
       "dimensiones": {
           "alto": "60 cm",
@@ -95,6 +115,10 @@
       "cantidadDisponible": 6,
       "linea": "Modern_Touch",
       "precio": 8490,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "descripcion": "Rack 'Modern Touch' con 4 cajones: práctico y elegante.",
       "dimensiones": {
           "alto": "60 cm",
@@ -113,6 +137,10 @@
       "cantidadDisponible": 4,
       "linea": "Classic_Storage",
       "precio": 9290,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "descripcion": "Rack 'Classic Storage' con 5 cajones: ideal para almacenamiento adicional.",
       "dimensiones": {
           "alto": "60 cm",
@@ -131,6 +159,10 @@
       "cantidadDisponible": 12,
       "linea": "Compact_Design",
       "precio": 5990,
+      "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
       "descripcion": "Mesa de luz 'Compact Design' con 1 cajón: elegante y práctica para tu habitación.",
       "dimensiones": {
           "alto": "50 cm",
@@ -144,21 +176,25 @@
       "fechaLanzamiento": "2024-09-05"
   },
   {
-      "id": "9",
-      "categoria": "Escritorio",
-      "cantidadDisponible": 9,
-      "linea": "Office_Elite",
-      "precio": 11990,
-      "descripcion": "Escritorio 'Office Elite' con 4 cajones: ideal para una oficina organizada y elegante.",
-      "dimensiones": {
-          "alto": "75 cm",
-          "ancho": "1.5 m",
-          "profundidad": "60 cm"
-      },
-      "cajones": 4,
-      "peso": "25 kg",
-      "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/9.png",
-      "fechaLanzamiento": "2024-10-10"
-  }
+        "id": "9",
+        "categoria": "Escritorio",
+        "cantidadDisponible": 9,
+        "linea": "Office Elite",
+        "precio": 11990,
+        "rebaja": {
+          "aplica" : false,
+          "porcentaje": 15
+        },
+        "descripcion": "Escritorio 'Office Elite' con 4 cajones: ideal para una oficina organizada y elegante.",
+        "dimensiones": {
+            "alto": "75 cm",
+            "ancho": "1.5 m",
+            "profundidad": "60 cm"
+        },
+        "cajones": 4,
+        "peso": "25 kg",
+        "material": "Madera",
+        "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/9.png",
+        "fechaLanzamiento": "2024-10-10"
+    }
 ]
