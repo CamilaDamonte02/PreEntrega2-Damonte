@@ -96,6 +96,13 @@ main{
   justify-content: center;
   align-items: center;
 }
+.tienda{
+  width: 100%;
+}
+
+.tienda .portada{
+  width: 100%;
+}
 
 .titulo-tienda{
   display: flex;
