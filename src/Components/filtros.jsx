@@ -1,8 +1,17 @@
 import { useEffect, useState } from 'react';
 import JSON from '../data/ariculosCarpinteria.json'
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from "react-router-dom"
+
 
 const Filtros = () => {
+
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/')
+    }
+
     const [categorias, setCategorias] = useState([]);
     const [lineas, setLineas] = useState([]);
 
@@ -23,7 +32,7 @@ const Filtros = () => {
                 <ul className="SubCategoria">
                     {categorias.map((categoria, index) => (
                         <li key={index}>
-                            <NavLink to={`/${categoria}`} className={({ isActive }) => (isActive ? "active" : "")}>
+                            <NavLink to={`/${`category/${categoria}`}`} className={({ isActive }) => (isActive ? "active" : "")}>
                                 {categoria}
                             </NavLink>
                         </li>
@@ -35,12 +44,15 @@ const Filtros = () => {
                 <ul className="SubCategoria">
                     {lineas.map((linea, index) => (
                         <li key={index}>
-                            <NavLink to={`/${linea}`} className={({ isActive }) => (isActive ? "active" : "noActivo")}>
+                            <NavLink to={`/${`category/${linea}`}`} className={({ isActive }) => (isActive ? "active" : "noActivo")}>
                                 {linea}
                             </NavLink>
                         </li>
                     ))}
                 </ul>
+            </div>
+            <div>
+                <button onClick={handleButtonClick}>Eliminar Filtros</button>
             </div>
         </div>
     )

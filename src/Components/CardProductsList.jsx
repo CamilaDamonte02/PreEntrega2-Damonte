@@ -1,4 +1,4 @@
-import CardProducts from './CardProducts';
+import Item from './Item';
 import PropTypes from 'prop-types';
 
 
@@ -6,7 +6,7 @@ function CardProductsList({ products }) {
   return (
     <div className='ProductList'>
       {products.map(product => (
-        <CardProducts key={product.id} product={product} />
+        <Item key={product.id} product={product} />
       ))}
     </div>
   );

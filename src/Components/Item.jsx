@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom'; 
 import Card from './Card'
 
 function CardProducts({product}) {
@@ -7,13 +8,14 @@ function CardProducts({product}) {
     height="17vw" 
     border="1px solid black" 
     >
-        <a className='producto' href="">
+        <NavLink to={`/${`item/${product.id}`}`} className="producto">
             <div className='FotoProducto'><img src={product.foto} alt=""/></div>
             <div className='NombreProducto'>  <h1>{product.categoria} {product.linea.replace(/_/g, ' ')}</h1></div>
             <div className='precio'>
                 <p className='precioNuevo'>${product.precio}</p>
             </div>
-        </a>
+        </NavLink>
+
     </Card>
 }
 

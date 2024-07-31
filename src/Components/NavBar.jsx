@@ -1,11 +1,19 @@
 import Logo from '../assets/DR Muebles Blanco.png';
 import CartWidget from './CartWidget';
-import ItemListContainer from './ItemListContainer';
+import ItemListContainer from './ItemListContaineraaa';
+import { useNavigate } from "react-router-dom"
 
 export const NavBar = () => {
+
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/')
+    }
+
     return (
         <nav>
-            <div className='Logo'>
+            <div className='Logo' onClick={handleButtonClick}>
                 <img src={Logo} alt="Logo de DR Muebles" />
                 <h1>DR Muebles</h1>
             </div>

@@ -63,6 +63,7 @@ li a{
 .Logo{
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .Logo{
@@ -114,7 +115,9 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+
 .tienda{
   width: 100%;
 }
@@ -233,6 +236,17 @@ main{
   text-align: left;
 }
 
+.Filtros div button{
+  border: none;
+  padding: 0.3vw;
+  margin: 2vw 0;
+  font-size: 1vw;
+  font-family: "Open Sans", sans-serif;
+  background-color: white;
+}
+
+/*Cartel*/
+
 .Cartel{
   font-family: "Open Sans", sans-serif;
   background-color: #808080;
@@ -266,4 +280,195 @@ main{
 .imagenCargando img {
   width: 7vw;
   margin: 0;
+}
+
+/*Ruta incorrecta*/
+.RutaIncorrecta{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RutaIncorrecta div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  background-color: red;
+  padding: 2vw;
+}
+
+.RutaIncorrecta h1{
+  text-transform: uppercase;
+}
+
+.RutaIncorrecta p{
+  font-size: 1.5vw;
+}
+
+.RutaIncorrecta button{
+  padding: 0.5vw;
+  background-color: white;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+/*Muestra producto*/
+.ProductoMuestra{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 3vw;
+  gap: 10vw;
+}
+
+.ImagenProducto img{
+  width: 25vw;
+}
+
+.InformacionProducto{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0;
+}
+
+.NombresProducto{
+  grid-column: 1/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.5vw;
+}
+
+.NombresProducto h1{
+  font-weight: 700;
+}
+
+.NombresProducto h2{
+  font-weight: 300;
+}
+
+.DescuentoProducto{
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.DescuentoProducto p{
+  font-family: "Figtree", sans-serif;
+  background-color: red;
+  font-size: 1.5vw;
+  color: white;
+  font-weight: 800;
+  padding: 0.5vw 1.5vw;
+}
+
+.PrecioProducto{
+  grid-column: 1/4;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  font-family:  "Open Sans", sans-serif;
+  font-size: 2vw;
+}
+
+.PrecioProducto .precioViejoProducto{
+  font-size: 1vw;
+  color: red;
+  text-decoration: line-through;
+}
+
+.DescripcionProducto{
+  grid-column: 1/4;
+  grid-row: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:  "Open Sans", sans-serif;
+  font-size: 1vw;
+}
+
+.CaracteristicasProducto{
+  grid-column: 1/4;
+  grid-row: 4/6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family:  "Open Sans", sans-serif;
+  margin: 1vw;
+}
+
+.CaracteristicasProducto p{
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1vw;
+}
+
+.CaracteristicasProducto table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1vw;
+  text-align: start;
+  width: 50%;
+  padding: 1;
+}
+
+.CaracteristicasProducto td, .CaracteristicasProducto th {
+  border: none; 
+  padding: 0 1vw;
+}
+
+
+.CaracteristicasProducto tbody tr:not(:last-child) td {
+  border-bottom: 1px solid black;
+}
+
+.CaracteristicasProducto tbody tr td:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.BotonComprarProducto{
+  grid-column: 1/4;
+  grid-row: 6/7;
+}
+
+.BotonComprarProducto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BotonComprarProducto button{
+  background-color: #808080;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1vw;
+  font-size: 1vw;
+  border: none;
+  width: 20vw;
+}
+
+.BotonComprarProducto button img{
+  width: 1.5vw;
 }
