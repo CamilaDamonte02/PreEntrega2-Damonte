@@ -179,7 +179,7 @@
         "id": "9",
         "categoria": "Escritorio",
         "cantidadDisponible": 9,
-        "linea": "Office Elite",
+        "linea": "Office_Elite",
         "precio": 11990,
         "rebaja": {
           "aplica" : false,

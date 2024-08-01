@@ -31,6 +31,12 @@ nav{
   justify-content: space-between;
   padding: 0.5vw 1vw;
   margin: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 8vh; 
+  overflow-y: auto;
+  z-index: 1000;
 }
 
 ul{
@@ -162,8 +168,9 @@ main{
   justify-content: space-between;
   gap: 1vw;
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
+
 
 .FotoProducto{
   height: 60%;
@@ -211,12 +218,19 @@ main{
   background-color: #808080;
   line-height: 1vw;
   padding: 1.5vw;
+  width: 17vw;
   color: white;
   font-family: "Open Sans", sans-serif;
   padding-right: 2.5vw;
   display: flex;
   flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 80vh; 
+  overflow-y: auto; 
 }
+
 .Categoria{
   font-size: 1.5vw;
 }
@@ -224,25 +238,48 @@ main{
   margin: 1vw 0;
 }
 .SubCategoria {  
-  margin-left: 3vw;
+  margin-left: 1.5vw;
   font-size: 1.1vw;
-  text-decoration: underline;
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+
+.SubCategoria a{
+  transition: 0.5s;
+}
+
+.SubCategoria a:hover{
+  color: #808080;
+  text-decoration: none;
+  background-color: white;
+  padding: 0 1vw;
 }
 
 .SubCategoria li{
   text-align: left;
 }
 
-.Filtros div button{
+.Filtros .BotonFiltros{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Filtros .BotonFiltros button{
   border: none;
   padding: 0.3vw;
   margin: 2vw 0;
   font-size: 1vw;
+  width: 20vw;
   font-family: "Open Sans", sans-serif;
   background-color: white;
+  transition: 0.5s;
+}
+
+.Filtros .BotonFiltros button:hover{
+  cursor: pointer;
+  width: 9vw;
 }
 
 /*Cartel*/
@@ -322,11 +359,18 @@ main{
 /*Muestra producto*/
 .ProductoMuestra{
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContainerProductoMuestra{
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 3vw;
   gap: 10vw;
+  max-width: 65vw;
 }
 
 .ImagenProducto img{
@@ -448,9 +492,6 @@ main{
 .BotonComprarProducto{
   grid-column: 1/4;
   grid-row: 6/7;
-}
-
-.BotonComprarProducto{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -467,6 +508,12 @@ main{
   font-size: 1vw;
   border: none;
   width: 20vw;
+  transition: 0.3s;
+}
+
+.BotonComprarProducto button:hover{
+    width: 13vw;
+    cursor: pointer;
 }
 
 .BotonComprarProducto button img{

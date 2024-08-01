@@ -45,13 +45,13 @@ const Filtros = () => {
                     {lineas.map((linea, index) => (
                         <li key={index}>
                             <NavLink to={`/${`category/${linea}`}`} className={({ isActive }) => (isActive ? "active" : "noActivo")}>
-                                {linea}
+                                {linea.replace(/_/g, ' ')}
                             </NavLink>
                         </li>
                     ))}
                 </ul>
             </div>
-            <div>
+            <div className='BotonFiltros'>
                 <button onClick={handleButtonClick}>Eliminar Filtros</button>
             </div>
         </div>
