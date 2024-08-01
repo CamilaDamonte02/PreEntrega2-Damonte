@@ -1,6 +1,6 @@
 import Logo from '../assets/DR Muebles Blanco.png';
 import CartWidget from './CartWidget';
-import ItemListContainer from './ItemListContaineraaa';
+import ItemListContainer from './ItemListNavBar';
 import { useNavigate } from "react-router-dom"
 
 export const NavBar = () => {
