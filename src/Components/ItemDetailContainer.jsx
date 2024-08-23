@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../data/ariculosCarpinteria.json';
+import {itemContext} from '../Context/ItemsContext.jsx'
 
 function ItemDetailContainer() {
     const {id} = useParams()
     const [product, setProduct] = useState(null)
+
+    const {addProduct} = useContext(itemContext)
 
     useEffect(() => {
             const foundProduct = data.find(p => p.id === id);
@@ -77,7 +80,7 @@ function ItemDetailContainer() {
                         </table>
                     </div>
                     <div className='BotonComprarProducto'>
-                        <button><img src="https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/Carrito.png" alt="carrito" />Comprar</button>
+                        <button onClick={() => addProduct(product)} ><img src="https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/Carrito.png" alt="carrito" />Comprar</button>
                     </div>
                 </div>
             </div>

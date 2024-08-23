@@ -1,7 +1,7 @@
-import React from 'react'
 import { useEffect, useState } from 'react'
 import Filtros from './filtros'
 import CardProductsList from './CardProductsList'
+import Search from './Search'
 import data from '../data/ariculosCarpinteria.json'
 import { useParams } from 'react-router-dom'
 import loader from '../assets/cargando.gif'
@@ -34,7 +34,7 @@ function ItemListContainer(){
             console.log("categoryId:", categoryId);
             setLoading(false);
         });
-    }, [categoryId]);
+    }, [categoryId, products]);
 
     return (
         <div>
@@ -46,6 +46,7 @@ function ItemListContainer(){
                 <div className="tienda body">
                     <img className="Portada" src="https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/portadaTienda.png" alt="Portada" />
                     <h1 className="titulo-tienda">Tienda</h1>
+                    <Search></Search>
                     <div className="contenido-tienda">
                         <Filtros />
                         <div className="cardProductListContainer">
