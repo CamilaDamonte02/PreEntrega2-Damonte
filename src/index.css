@@ -541,6 +541,7 @@ main{
 .TablaListaCompras {
   border: none; 
   font-family:  "Open Sans", sans-serif;
+  border-collapse: collapse
 }
 
 .TablaListaCompras thead{
@@ -557,12 +558,20 @@ main{
   border-radius: 25px;
   color: white;
   padding: 0 1vw;
+  font-size: 1.2vw;
 }
 
 .TablaListaCompras tbody div button{
   border: none;
   color: white;
   background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TablaListaCompras tbody div button img{
+  width: 1.5vw;
 }
 
 .TablaListaCompras tbody div button:hover{
@@ -579,3 +588,46 @@ th, td {
   text-align: left;
 }
 
+.TotalCompras{
+  font-family:  "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.TotalCompras div {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  width: 100%;
+  padding: 0 0.5vw;
+}
+
+.TotalCompras div p:nth-child(2){
+  text-align: end;
+  width: 100%;
+}
+
+.TotalCompras .Envio{
+  background-color: #CBC8C8;
+  
+}
+
+.TotalCompras .Total, button{
+  background-color: #808080;
+  color: white;
+}
+
+.TotalCompras .BotonPagar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw 0;
+}
+
+.TotalCompras .BotonPagar button{
+  border: none;
+  padding: 0.5vw 1vw;
+  border-radius: 25px;
+}

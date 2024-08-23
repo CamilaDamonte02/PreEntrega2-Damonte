@@ -80,7 +80,7 @@ function ItemDetailContainer() {
                         </table>
                     </div>
                     <div className='BotonComprarProducto'>
-                        <button onClick={() => addProduct(product)} ><img src="https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/Carrito.png" alt="carrito" />Comprar</button>
+                        <button onClick={() => addProduct(product)} ><img src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/Carrito.png" alt="carrito" />Comprar</button>
                     </div>
                 </div>
             </div>

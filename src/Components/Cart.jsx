@@ -19,13 +19,13 @@ export const Cart = () => {
                     <td>$7.990</td>
                     <td>
                         <div>
-                            <button>-</button>
+                            <button><img src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/icono%20menos.png" alt="" /></button>
                             <p>2</p>
-                            <button>+</button>
+                            <button><img src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/iconoSumar.png" alt="" /></button>
                         </div>
                     </td>
                     <td>$15.980</td>
-                    <td><div><button className="BotonEliminar">X</button></div></td>
+                    <td><div><button className="BotonEliminar"><img src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/icono%20cruz.png" alt="" /></button></div></td>
                 </tr>
             </tbody>
         </table>
@@ -35,15 +35,15 @@ export const Cart = () => {
                     <p>Subtotal:</p>
                     <p>$14.416</p>
                 </div>
-                <div>
+                <div className="Envio">
                     <p>Envío</p>
                     <p>Gratis</p>
                 </div>
-                <div>
+                <div className="Total">
                     <p>TOTAL</p>
                     <p>$14.416</p>
                 </div>
-                <button>Comprar</button>
+                <div className="BotonPagar"><button>Pagar</button></div>
             </div>
         </div>
     </div>
