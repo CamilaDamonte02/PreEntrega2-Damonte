@@ -18,7 +18,7 @@
       "cajones": 0,
       "peso": "20 kg",
       "material": "Cuero sintético",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/1.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/1.png",
       "fechaLanzamiento": "2024-02-20"
   },
   {
@@ -40,7 +40,7 @@
       "cajones": 0,
       "peso": "15 kg",
       "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/2.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/2.png",
       "fechaLanzamiento": "2024-03-15"
   },
   {
@@ -62,7 +62,7 @@
       "cajones": 3,
       "peso": "18 kg",
       "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/3.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/3.png",
       "fechaLanzamiento": "2024-04-10"
   },
   {
@@ -84,7 +84,7 @@
       "cajones": 6,
       "peso": "25 kg",
       "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/4.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/4.png",
       "fechaLanzamiento": "2024-05-20"
   },
   {
@@ -106,7 +106,7 @@
       "cajones": 4,
       "peso": "20 kg",
       "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/5.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/5.png",
       "fechaLanzamiento": "2024-06-25"
   },
   {
@@ -128,7 +128,7 @@
       "cajones": 4,
       "peso": "20 kg",
       "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/6.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/6.png",
       "fechaLanzamiento": "2024-07-15"
   },
   {
@@ -150,7 +150,7 @@
       "cajones": 5,
       "peso": "22 kg",
       "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/7.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/7.png",
       "fechaLanzamiento": "2024-08-10"
   },
   {
@@ -172,7 +172,7 @@
       "cajones": 1,
       "peso": "10 kg",
       "material": "Madera",
-      "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/8.png",
+      "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/8.png",
       "fechaLanzamiento": "2024-09-05"
   },
   {
@@ -194,7 +194,7 @@
         "cajones": 4,
         "peso": "25 kg",
         "material": "Madera",
-        "foto": "https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/FotosMuebles/9.png",
+        "foto": "https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/9.png",
         "fechaLanzamiento": "2024-10-10"
     }
 ]

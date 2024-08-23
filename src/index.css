@@ -539,11 +539,43 @@ main{
 }
 
 .TablaListaCompras {
-  border: 1px solid black;
+  border: none; 
+  font-family:  "Open Sans", sans-serif;
+}
+
+.TablaListaCompras thead{
+  text-transform: uppercase;
+}
+
+.TablaListaCompras tbody div{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #808080;
+  border-radius: 25px;
+  color: white;
+  padding: 0 1vw;
+}
+
+.TablaListaCompras tbody div button{
+  border: none;
+  color: white;
+  background-color: inherit;
+}
+
+.TablaListaCompras tbody div button:hover{
+  cursor: pointer;
+}
+
+.TablaListaCompras img{
+  width: 5vw;
 }
 
 th, td {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 8px;
   text-align: left;
 }
+

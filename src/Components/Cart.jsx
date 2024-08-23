@@ -14,7 +14,7 @@ export const Cart = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="path-to-your-image.jpg" alt="" /></td>
+                    <td><img src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/FotosMuebles/2.png" alt="" /></td>
                     <td>Escritorio línea Rústico Encanto</td>
                     <td>$7.990</td>
                     <td>
@@ -25,7 +25,7 @@ export const Cart = () => {
                         </div>
                     </td>
                     <td>$15.980</td>
-                    <td><button>X</button></td>
+                    <td><div><button className="BotonEliminar">X</button></div></td>
                 </tr>
             </tbody>
         </table>
