@@ -44,7 +44,7 @@ function ItemListContainer(){
                 </div>
             ) : products.length ? (
                 <div className="tienda body">
-                    <img className="Portada" src="https://camiladamonte02.github.io/PreEntrega2-Damonte/src/assets/portadaTienda.png" alt="Portada" />
+                    <img className="Portada" src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/portadaTienda.png" alt="Portada" />
                     <h1 className="titulo-tienda">Tienda</h1>
                     <Search></Search>
                     <div className="contenido-tienda">
