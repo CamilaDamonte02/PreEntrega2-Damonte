@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react'
 import Filtros from './filtros'
 import CardProductsList from './CardProductsList'
 import Search from './Search'
-import data from '../data/ariculosCarpinteria.json'
 import { useParams } from 'react-router-dom'
 import loader from '../assets/cargando.gif'
 import Cartel from './Cartel'
+import { getFirestore, getDocs, where, query, collection } from 'firebase/firestore';
 
 
 function ItemListContainer(){
@@ -15,26 +15,24 @@ function ItemListContainer(){
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        const myPromise = new Promise((res) => {
-            setTimeout(() => res(data), 500);
-        })
-       
-        myPromise.then(res => {
-            console.table(categoryId);
-            if (!categoryId) {
-                // Si es undefined, mostrar todos los productos
-                setProducts(res);
-            } else {
-                // Si no es undefined, mostrar solo los productos filtrados
-                // Filtra por categoría
-                const filteredProducts = res.filter(i => i.categoria.toLowerCase() === categoryId.toLowerCase() || i.linea.toLowerCase() === categoryId.toLowerCase());
-                setProducts(filteredProducts);
-            }
-            console.table(products);
-            console.log("categoryId:", categoryId);
-            setLoading(false);
-        });
-    }, [categoryId, products]);
+        const db = getFirestore();
+        const refCollection = !categoryId 
+            ? collection(db, "Productos") 
+            : query(collection(db, "Productos"), where("categoria", "==", categoryId)); 
+        getDocs(refCollection)
+            .then((snapshot) => {
+                const productsData = snapshot.docs.map((doc) => {
+                    return { id: doc.id, ...doc.data() };
+                });
+                console.log('Productos obtenidos:', productsData);
+                setProducts(productsData);
+            })
+            .catch((error) => {
+                console.error('Error al obtener los productos:', error);
+            })
+            .finally(() => setLoading(false));
+
+    }, [categoryId]);
 
     return (
         <div>
@@ -42,22 +40,22 @@ function ItemListContainer(){
                 <div className="imagenCargando">
                     <img src={loader} alt="cargando" />
                 </div>
-            ) : products.length ? (
+            ) : (
                 <div className="tienda body">
                     <img className="Portada" src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/portadaTienda.png" alt="Portada" />
                     <h1 className="titulo-tienda">Tienda</h1>
-                    <Search></Search>
+                    <Search />
                     <div className="contenido-tienda">
                         <Filtros />
                         <div className="cardProductListContainer">
-                            <CardProductsList products={products} />
+                            {products.length ? (
+                                <CardProductsList products={products} />
+                            ) : (
+                                <Cartel nombre="Advertencia" descripcion="No hay productos disponibles" />
+                            )}
                         </div>
                     </div>
                 </div>
-            ) : (
-                <main>
-                    <Cartel nombre="Advertencia" descripcion="No hay productos disponibles" />
-                </main>
             )}
         </div>
     );

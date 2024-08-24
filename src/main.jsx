@@ -1,13 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { initializeApp } from 'firebase/app'
 import App from './App.jsx'
 import './index.css'
-/*import { initializeApp } from "firebase/app";
-import { getFirestore, getDoc, doc } from 'firebase/firestore';*/
 
-
-
-/*const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyBevWKvFe4-jEBW0NnwYX_mvZuaLlYT4ig",
   authDomain: "muebleria-dr.firebaseapp.com",
   projectId: "muebleria-dr",
@@ -16,17 +13,13 @@ import { getFirestore, getDoc, doc } from 'firebase/firestore';*/
   appId: "1:83043528531:web:e8b6c594cc6bfee565fba6"
 };
 
+initializeApp(firebaseConfig);
+
+
+
 // Initialize Firebase
-initializeApp(firebaseConfig);*/
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  /*const refDoc = doc(db, "Productos", "C0jru7cWczfFYZLuHwhF")
-
-  getDoc(refDoc)
-  .then((snapshot.data())) => {
-    console.log()
-  }*/
-
   <React.StrictMode>
     <App />
   </React.StrictMode>,

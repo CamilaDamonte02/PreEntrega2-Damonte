@@ -6,6 +6,7 @@ import ItemDetailContainer from './Components/ItemDetailContainer';
 import {Cart} from './Components/Cart';
 import { Provider } from './Context/ItemsContext';
 
+
 function App() {
   return (
     <Provider>
