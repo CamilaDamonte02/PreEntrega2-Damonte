@@ -9,32 +9,27 @@ import { getFirestore, getDocs, where, query, collection } from 'firebase/firest
 
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
-    const { categoryId, lineId } = useParams();  // Capturar ambos parámetros de la URL
+    const { categoryId, lineId } = useParams();  
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const db = getFirestore();
         let refCollection;
 
-        // Lógica de filtrado condicional
         if (categoryId) {
-            // Filtrar por categoría si está presente
             refCollection = query(
                 collection(db, 'Productos'),
                 where('categoria', '==', categoryId)
             );
         } else if (lineId) {
-            // Filtrar por línea si está presente y no hay categoría
             refCollection = query(
                 collection(db, 'Productos'),
                 where('linea', '==', lineId)
             );
         } else {
-            // Obtener todos los productos si no hay filtros
             refCollection = collection(db, 'Productos');
         }
 
-        // Obtener los documentos de Firestore según la consulta construida
         getDocs(refCollection)
             .then((snapshot) => {
                 const productsData = snapshot.docs.map((doc) => {
@@ -47,7 +42,7 @@ function ItemListContainer() {
                 console.error('Error al obtener los productos:', error);
             })
             .finally(() => setLoading(false));
-    }, [categoryId, lineId]);  // Actualizado para depender de ambos parámetros
+    }, [categoryId, lineId]);  
 
     return (
         <div>
