@@ -20,12 +20,12 @@ export const Provider = ( {children} ) => {
             });
             setProductos(transform);
        }else{
-        setProductos((prev) => [...prev, productos])
+        setProductos((prev) => [...prev, product])
        }
     }
 
     const removeProduct = (id) => {
-        const remove = productos.find((i) => i.id !== id);
+        const remove = productos.filter((i) => i.id !== id);
         setProductos(remove)
     }
 

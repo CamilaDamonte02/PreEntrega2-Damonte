@@ -1,24 +1,40 @@
-import { useEffect, useState } from 'react'
-import Filtros from './filtros'
-import CardProductsList from './CardProductsList'
-import Search from './Search'
-import { useParams } from 'react-router-dom'
-import loader from '../assets/cargando.gif'
-import Cartel from './Cartel'
+import { useEffect, useState } from 'react';
+import Filtros from './filtros';
+import CardProductsList from './CardProductsList';
+import Search from './Search';
+import { useParams } from 'react-router-dom';
+import loader from '../assets/cargando.gif';
+import Cartel from './Cartel';
 import { getFirestore, getDocs, where, query, collection } from 'firebase/firestore';
 
-
-function ItemListContainer(){
-
-    const [products, setProducts] = useState([])
-    const {categoryId} = useParams()
-    const [loading, setLoading] = useState(true)
+function ItemListContainer() {
+    const [products, setProducts] = useState([]);
+    const { categoryId, lineId } = useParams();  // Capturar ambos parámetros de la URL
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const db = getFirestore();
-        const refCollection = !categoryId 
-            ? collection(db, "Productos") 
-            : query(collection(db, "Productos"), where("categoria", "==", categoryId)); 
+        let refCollection;
+
+        // Lógica de filtrado condicional
+        if (categoryId) {
+            // Filtrar por categoría si está presente
+            refCollection = query(
+                collection(db, 'Productos'),
+                where('categoria', '==', categoryId)
+            );
+        } else if (lineId) {
+            // Filtrar por línea si está presente y no hay categoría
+            refCollection = query(
+                collection(db, 'Productos'),
+                where('linea', '==', lineId)
+            );
+        } else {
+            // Obtener todos los productos si no hay filtros
+            refCollection = collection(db, 'Productos');
+        }
+
+        // Obtener los documentos de Firestore según la consulta construida
         getDocs(refCollection)
             .then((snapshot) => {
                 const productsData = snapshot.docs.map((doc) => {
@@ -31,8 +47,7 @@ function ItemListContainer(){
                 console.error('Error al obtener los productos:', error);
             })
             .finally(() => setLoading(false));
-
-    }, [categoryId]);
+    }, [categoryId, lineId]);  // Actualizado para depender de ambos parámetros
 
     return (
         <div>

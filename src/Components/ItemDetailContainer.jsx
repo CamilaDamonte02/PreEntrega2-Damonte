@@ -23,7 +23,6 @@ function ItemDetailContainer() {
             setProduct({id: snapshot.id, ...snapshot.data()})
         })
         .finally(() => setLoading(false))
-
             const foundProduct = data.find(p => p.id === id);
             setProduct(foundProduct);
             console.log(id)
