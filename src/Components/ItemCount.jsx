@@ -1,10 +1,11 @@
 import { useState } from "react";
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
+
 
 export const ItemCount = ({ stock, onAdd }) => {
     const [count, setCount] = useState(1);
+
     
-    // Corrección en la lógica de incremento y decremento
     const handleIncrease = () => {
         if (count < stock) {
             setCount((prev) => prev + 1);
@@ -19,7 +20,7 @@ export const ItemCount = ({ stock, onAdd }) => {
 
     const handleAdd = () => {
         onAdd(count);
-        setCount(1);  // Resetea el contador después de agregar
+        setCount(1);  
     };
 
     return (
@@ -40,8 +41,8 @@ export const ItemCount = ({ stock, onAdd }) => {
 };
 
 ItemCount.propTypes = {
-    stock: PropTypes.number.isRequired, // 'stock' debe ser un número y es obligatorio
-    onAdd: PropTypes.func.isRequired // 'onAdd' debe ser una función y es obligatorio
+    stock: PropTypes.number.isRequired, 
+    onAdd: PropTypes.func.isRequired
 };
 
 export default ItemCount;

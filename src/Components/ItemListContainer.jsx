@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Filtros from './filtros';
 import CardProductsList from './CardProductsList';
-import Search from './Search';
 import { useParams } from 'react-router-dom';
 import loader from '../assets/cargando.gif';
 import Cartel from './Cartel';
@@ -54,7 +53,6 @@ function ItemListContainer() {
                 <div className="tienda body">
                     <img className="Portada" src="https://camiladamonte02.github.io/ProyectoFinal-Damonte/src/assets/portadaTienda.png" alt="Portada" />
                     <h1 className="titulo-tienda">Tienda</h1>
-                    <Search />
                     <div className="contenido-tienda">
                         <Filtros />
                         <div className="cardProductListContainer">

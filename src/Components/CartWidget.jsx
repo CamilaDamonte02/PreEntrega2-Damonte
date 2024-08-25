@@ -6,13 +6,15 @@ import { itemContext } from "../Context/ItemsContext";
 
 
 export const CartWidget = () => {
-    const {productos} = useContext(itemContext)
+    const { getTotalQuantity } = useContext(itemContext);
+    const totalQuantity = getTotalQuantity();
+
     return (
         <Link to='/Cart' style={{ textDecoration: 'none' }} >
             <div className='Carrito'>
                 <img src={Carrito} alt="Carrito de compras" />
                 <div className='circuloNumeroCompras'>
-                    <p>{productos.length}</p>
+                    <p>{totalQuantity}</p>
                 </div>
             </div>
         </Link>

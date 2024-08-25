@@ -31,7 +31,7 @@ function ItemDetailContainer() {
     }, [id]);
 
     if (loading) {
-        return <p>Cargando...</p>;
+        return <img src={loader} alt="cargando" />
     }
 
     if (!product) {
@@ -39,6 +39,7 @@ function ItemDetailContainer() {
     }
 
     const onAdd = (count) => {
+        console.log("Cantidad agregada al carrito:", count);
         addProduct({ ...product, cantidad: count });
     }
 
